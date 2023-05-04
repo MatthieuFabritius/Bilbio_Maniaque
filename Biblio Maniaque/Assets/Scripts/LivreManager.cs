@@ -6,33 +6,57 @@ public class LivreManager : MonoBehaviour
 {
     public Canvas swap;
     public Canvas livre;
-    public GameObject epreuve21;
-    public GameObject epreuve22;
-    public GameObject epreuve23;
-    public GameObject epreuve24;
+    public GameObject epreuve01;
+    public GameObject epreuve02;
+    public GameObject epreuve03;
+    public GameObject epreuve04;
 
     public void OuvirLivre21()
     {
         swap.gameObject.SetActive(false);
         livre.gameObject.SetActive(false);
-        epreuve21.gameObject.SetActive(true);
+        epreuve01.gameObject.SetActive(true);
     }
     public void OuvirLivre22()
     {
         swap.gameObject.SetActive(false);
         livre.gameObject.SetActive(false);
-        epreuve22.gameObject.SetActive(true);
+        epreuve02.gameObject.SetActive(true);
     }
     public void OuvirLivre23()
     {
         swap.gameObject.SetActive(false);
         livre.gameObject.SetActive(false);
-        epreuve23.gameObject.SetActive(true);
+        epreuve03.gameObject.SetActive(true);
     }
     public void OuvirLivre24()
     {
         swap.gameObject.SetActive(false);
         livre.gameObject.SetActive(false);
-        epreuve24.gameObject.SetActive(true);
+        epreuve04.gameObject.SetActive(true);
+    }
+    public void FermerLivre21()
+    {
+        swap.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
+        epreuve01.gameObject.SetActive(false);
+    }
+    public void FermerLivre22()
+    {
+        swap.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
+        epreuve02.gameObject.SetActive(false);
+    }
+    public void FermerLivre23()
+    {
+        swap.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
+        epreuve03.gameObject.SetActive(false);
+    }
+    public void FermerLivre24()
+    {
+        swap.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
+        epreuve04.gameObject.SetActive(false);
     }
 }
