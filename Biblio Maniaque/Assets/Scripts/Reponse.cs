@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Reponse : MonoBehaviour
 {
-    public int reponse;
+    public int quelReponse;
 }
