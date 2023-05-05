@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -11,34 +12,52 @@ public class MenuManager : MonoBehaviour
     public GameObject instructionsPanel;
     public GameObject creditsPanel;
 
+    public Transform newPosition;
+    public Transform initialPosition;
+
     public void OpenOptionsPanel()
     {
-        optionsPanel.SetActive(true);
-        CloseAllPanels();
+        audioSource.PlayOneShot(buttonClick);
+        optionsPanel.transform.position = newPosition.position;
     }
 
     public void OpenInstructionsPanel()
     {
-        instructionsPanel.SetActive(true);
-        CloseAllPanels();
+        audioSource.PlayOneShot(buttonClick);
+        instructionsPanel.transform.position = newPosition.position;
     }
 
     public void OpenCreditsPanel()
     {
-        creditsPanel.SetActive(true);
-        CloseAllPanels();
+        audioSource.PlayOneShot(buttonClick);
+        creditsPanel.transform.position = newPosition.position; 
     }
 
-    public void CloseAllPanels()
+    public void CloseOptionsPanel()
     {
-        optionsPanel.SetActive(false);
-        instructionsPanel.SetActive(false);
-        creditsPanel.SetActive(false);
+        audioSource.PlayOneShot(buttonClick); 
+        optionsPanel.transform.position = initialPosition.position;
     }
 
+    public void CloseIntructionsPanel()
+    {
+        audioSource.PlayOneShot(buttonClick); 
+        instructionsPanel.transform.position = initialPosition.position;
+    }
+
+    public void CloseCreditsPanel()
+    {
+        audioSource.PlayOneShot(buttonClick); 
+        creditsPanel.transform.position = initialPosition.position;
+    }
     public void QuitGame()
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    public void ChangeScene(string _sceneName)
+    {
+        SceneManager.LoadScene(_sceneName);
     }
 }
