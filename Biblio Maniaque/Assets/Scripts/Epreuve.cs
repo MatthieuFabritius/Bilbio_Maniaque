@@ -5,4 +5,5 @@ using UnityEngine;
 public class Epreuve : MonoBehaviour
 {
     public int epreuves;
+    public int nombre;
 }
