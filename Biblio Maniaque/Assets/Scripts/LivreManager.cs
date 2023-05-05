@@ -52,6 +52,9 @@ public class LivreManager : MonoBehaviour
     public GameObject Ranger7;
     public GameObject Ranger8;
 
+    public int finition;
+    public GameObject fin;
+
     public void OuvirLivre1()
     {
         livre.gameObject.SetActive(false);
@@ -97,97 +100,121 @@ public class LivreManager : MonoBehaviour
     {
         epreuve1.gameObject.SetActive(false);
         Image1.gameObject.SetActive(true);
+        boutonLivre1.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
     }
     public void FermerLivre2()
     {
         epreuve2.gameObject.SetActive(false);
         Image2.gameObject.SetActive(true);
+        boutonLivre2.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
     }
     public void FermerLivre3()
     {
         epreuve3.gameObject.SetActive(false);
         Image3.gameObject.SetActive(true);
+        boutonLivre3.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
     }
     public void FermerLivre4()
     {
         epreuve4.gameObject.SetActive(false);
         Image4.gameObject.SetActive(true);
+        boutonLivre4.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
     }
     public void FermerLivre5()
     {
         epreuve5.gameObject.SetActive(false);
         Image5.gameObject.SetActive(true);
+        boutonLivre5.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
     }
     public void FermerLivre6()
     {
         epreuve6.gameObject.SetActive(false);
         Image6.gameObject.SetActive(true);
+        boutonLivre6.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
     }
     public void FermerLivre7()
     {
         epreuve7.gameObject.SetActive(false);
         Image7.gameObject.SetActive(true);
+        boutonLivre7.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
     }
     public void FermerLivre8()
     {
         epreuve8.gameObject.SetActive(false);
         Image8.gameObject.SetActive(true);
+        boutonLivre8.gameObject.SetActive(true);
+        livre.gameObject.SetActive(true);
     }
 
     public void RangerLivre1()
     {
-        livre.gameObject.SetActive(true);
         Livre1.gameObject.SetActive(false);
         boutonLivre1.gameObject.SetActive(false);
         Ranger1.gameObject.SetActive(true);
+        finition++;
     }
     public void RangerLivre2()
     {
-        livre.gameObject.SetActive(true);
         Livre2.gameObject.SetActive(false);
         boutonLivre2.gameObject.SetActive(false);
         Ranger2.gameObject.SetActive(true);
+        finition++;
     }
     public void RangerLivre3()
     {
-        livre.gameObject.SetActive(true);
         Livre3.gameObject.SetActive(false);
         boutonLivre3.gameObject.SetActive(false);
         Ranger3.gameObject.SetActive(true);
+        finition++;
     }
     public void RangerLivre4()
     {
-        livre.gameObject.SetActive(true);
         Livre4.gameObject.SetActive(false);
         boutonLivre4.gameObject.SetActive(false);
         Ranger4.gameObject.SetActive(true);
+        finition++;
     }
     public void RangerLivre5()
     {
-        livre.gameObject.SetActive(true);
         Livre5.gameObject.SetActive(false);
         boutonLivre5.gameObject.SetActive(false);
         Ranger5.gameObject.SetActive(true);
+        finition++;
     }
     public void RangerLivre6()
     {
-        livre.gameObject.SetActive(true);
         Livre6.gameObject.SetActive(false);
         boutonLivre6.gameObject.SetActive(false);
         Ranger6.gameObject.SetActive(true);
+        finition++;
     }
     public void RangerLivre7()
     {
-        livre.gameObject.SetActive(true);
         Livre7.gameObject.SetActive(false);
         boutonLivre7.gameObject.SetActive(false);
         Ranger7.gameObject.SetActive(true);
+        finition++;
     }
     public void RangerLivre8()
     {
-        livre.gameObject.SetActive(true);
         Livre8.gameObject.SetActive(false);
         boutonLivre8.gameObject.SetActive(false);
         Ranger8.gameObject.SetActive(true);
+        finition++;
+    }
+
+    public void Finits()
+    {
+        if(finition == 8)
+        {
+           fin.gameObject.SetActive(true);
+        }
     }
 }

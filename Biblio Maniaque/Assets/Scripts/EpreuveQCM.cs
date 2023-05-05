@@ -10,17 +10,19 @@ public class EpreuveQCM : MonoBehaviour
     public Reponse reponse;
     public Epreuve epreuves;
     public GameObject bouton;
+    public GameObject texte;
 
     public void BonneReponse()
     {
         bonneReponse ++;
     }
     
-    public void QCM(int nombreReponse)
+    public void QCM (int nombreReponse)
     {
         if (nombreReponse == reponse.reponse)
         {
             BonneReponse();
+            FinEpreuve();
         }
     }
     public void FinEpreuve()
@@ -29,6 +31,7 @@ public class EpreuveQCM : MonoBehaviour
         {
             QCM2.gameObject.SetActive(false);
             bouton.gameObject.SetActive(true);
+            texte.gameObject.SetActive(true);
         }
 
     }
