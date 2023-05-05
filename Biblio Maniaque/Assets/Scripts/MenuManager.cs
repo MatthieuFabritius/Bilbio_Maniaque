@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -13,32 +14,52 @@ public class MenuManager : MonoBehaviour
 
     public void OpenOptionsPanel()
     {
-        optionsPanel.SetActive(true);
+        Vector3 pos = optionsPanel.transform.position;
+        pos.x = 300f;
+        optionsPanel.transform.position = pos;
+
         CloseAllPanels();
     }
 
     public void OpenInstructionsPanel()
     {
-        instructionsPanel.SetActive(true);
+        Vector3 pos = instructionsPanel.transform.position;
+        pos.x = 300f;
+        instructionsPanel.transform.position = pos;
         CloseAllPanels();
     }
 
     public void OpenCreditsPanel()
     {
-        creditsPanel.SetActive(true);
+        Vector3 pos = creditsPanel.transform.position;
+        pos.x = 300f;
+        creditsPanel.transform.position = pos;
         CloseAllPanels();
     }
 
     public void CloseAllPanels()
     {
-        optionsPanel.SetActive(false);
-        instructionsPanel.SetActive(false);
-        creditsPanel.SetActive(false);
+        Vector3 pos = optionsPanel.transform.position;
+        pos.x = -300f;
+        optionsPanel.transform.position = pos;
+
+        pos = instructionsPanel.transform.position;
+        pos.x = -300f;
+        instructionsPanel.transform.position = pos;
+
+        pos = creditsPanel.transform.position;
+        pos.x = -300f;
+        creditsPanel.transform.position = pos;
     }
 
     public void QuitGame()
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    public void ChangeScene(string _sceneName)
+    {
+        SceneManager.LoadScene(_sceneName);
     }
 }
