@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class OpenURL : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string Url;
+    public void Open()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Application.OpenURL(Url);
     }
 }
