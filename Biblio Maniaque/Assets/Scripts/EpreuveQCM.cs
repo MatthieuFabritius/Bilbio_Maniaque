@@ -5,32 +5,30 @@ using UnityEngine;
 public class EpreuveQCM : MonoBehaviour
 {
     public int bonneReponse = 0;
-    public int nombreReponse;
+    public GameObject QCM2;
     public LivreManager livreManager;
     public Reponse reponse;
     public Epreuve epreuves;
+    public GameObject bouton;
 
     public void BonneReponse()
     {
-        bonneReponse++;
+        bonneReponse ++;
     }
-
-    public void QCM()
+    
+    public void QCM(int nombreReponse)
     {
-        if (nombreReponse == quelReponse)
+        if (nombreReponse == reponse.reponse)
         {
             BonneReponse();
-        }
-        else
-        {
-           
         }
     }
     public void FinEpreuve()
     {
-        if(bonneReponse = epreuves)
+        if(bonneReponse == epreuves.epreuves)
         {
-
+            QCM2.gameObject.SetActive(false);
+            bouton.gameObject.SetActive(true);
         }
 
     }
