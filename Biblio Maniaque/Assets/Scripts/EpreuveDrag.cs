@@ -17,9 +17,8 @@ public class EpreuveDrag : MonoBehaviour, IDropHandler
     {
         if (eventData.pointerDrag != null)
         {
-            Verifa();
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            
+          eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+           Verifa();
         }
     }
     public void Verifa()
@@ -27,8 +26,8 @@ public class EpreuveDrag : MonoBehaviour, IDropHandler
         if (trou == epreuve.nombre)
         {
             reussi++;
-            verif.verifTest();
             bon.gameObject.SetActive(true);
+            verif.verifTest();
             feed();
         }
         else
