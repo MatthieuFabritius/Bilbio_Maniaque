@@ -12,46 +12,44 @@ public class MenuManager : MonoBehaviour
     public GameObject instructionsPanel;
     public GameObject creditsPanel;
 
+    public Transform newPosition;
+    public Transform initialPosition;
+
     public void OpenOptionsPanel()
     {
-        Vector3 pos = optionsPanel.transform.position;
-        pos.x = 300f;
-        optionsPanel.transform.position = pos;
-
-        CloseAllPanels();
+        audioSource.PlayOneShot(buttonClick);
+        optionsPanel.transform.position = newPosition.position;
     }
 
     public void OpenInstructionsPanel()
     {
-        Vector3 pos = instructionsPanel.transform.position;
-        pos.x = 300f;
-        instructionsPanel.transform.position = pos;
-        CloseAllPanels();
+        audioSource.PlayOneShot(buttonClick);
+        instructionsPanel.transform.position = newPosition.position;
     }
 
     public void OpenCreditsPanel()
     {
-        Vector3 pos = creditsPanel.transform.position;
-        pos.x = 300f;
-        creditsPanel.transform.position = pos;
-        CloseAllPanels();
+        audioSource.PlayOneShot(buttonClick);
+        creditsPanel.transform.position = newPosition.position; 
     }
 
-    public void CloseAllPanels()
+    public void CloseOptionsPanel()
     {
-        Vector3 pos = optionsPanel.transform.position;
-        pos.x = -300f;
-        optionsPanel.transform.position = pos;
-
-        pos = instructionsPanel.transform.position;
-        pos.x = -300f;
-        instructionsPanel.transform.position = pos;
-
-        pos = creditsPanel.transform.position;
-        pos.x = -300f;
-        creditsPanel.transform.position = pos;
+        audioSource.PlayOneShot(buttonClick); 
+        optionsPanel.transform.position = initialPosition.position;
     }
 
+    public void CloseIntructionsPanel()
+    {
+        audioSource.PlayOneShot(buttonClick); 
+        instructionsPanel.transform.position = initialPosition.position;
+    }
+
+    public void CloseCreditsPanel()
+    {
+        audioSource.PlayOneShot(buttonClick); 
+        creditsPanel.transform.position = initialPosition.position;
+    }
     public void QuitGame()
     {
         Debug.Log("Quit");
