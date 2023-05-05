@@ -4,59 +4,190 @@ using UnityEngine;
 
 public class LivreManager : MonoBehaviour
 {
-    public Canvas swap;
+    //public Canvas swap;
     public Canvas livre;
-    public GameObject epreuve01;
-    public GameObject epreuve02;
-    public GameObject epreuve03;
-    public GameObject epreuve04;
 
-    public void OuvirLivre21()
+    public GameObject Livre1;
+    public GameObject Livre2;
+    public GameObject Livre3;
+    public GameObject Livre4;
+    public GameObject Livre5;
+    public GameObject Livre6;
+    public GameObject Livre7;
+    public GameObject Livre8;
+
+    public GameObject boutonLivre1;
+    public GameObject boutonLivre2;
+    public GameObject boutonLivre3;
+    public GameObject boutonLivre4;
+    public GameObject boutonLivre5;
+    public GameObject boutonLivre6;
+    public GameObject boutonLivre7;
+    public GameObject boutonLivre8;
+
+    public GameObject epreuve1;
+    public GameObject epreuve2;
+    public GameObject epreuve3;
+    public GameObject epreuve4;
+    public GameObject epreuve5;
+    public GameObject epreuve6;
+    public GameObject epreuve7;
+    public GameObject epreuve8;
+
+    public GameObject Image1;
+    public GameObject Image2;
+    public GameObject Image3;
+    public GameObject Image4;
+    public GameObject Image5;
+    public GameObject Image6;
+    public GameObject Image7;
+    public GameObject Image8;
+
+    public GameObject Ranger1;
+    public GameObject Ranger2;
+    public GameObject Ranger3;
+    public GameObject Ranger4;
+    public GameObject Ranger5;
+    public GameObject Ranger6;
+    public GameObject Ranger7;
+    public GameObject Ranger8;
+
+    public void OuvirLivre1()
     {
-        swap.gameObject.SetActive(false);
         livre.gameObject.SetActive(false);
-        epreuve01.gameObject.SetActive(true);
+        Livre1.gameObject.SetActive(true);
     }
-    public void OuvirLivre22()
+    public void OuvirLivre2()
     {
-        swap.gameObject.SetActive(false);
         livre.gameObject.SetActive(false);
-        epreuve02.gameObject.SetActive(true);
+        Livre2.gameObject.SetActive(true);
     }
-    public void OuvirLivre23()
+    public void OuvirLivre3()
     {
-        swap.gameObject.SetActive(false);
         livre.gameObject.SetActive(false);
-        epreuve03.gameObject.SetActive(true);
+        Livre3.gameObject.SetActive(true);
     }
-    public void OuvirLivre24()
+    public void OuvirLivre4()
     {
-        swap.gameObject.SetActive(false);
         livre.gameObject.SetActive(false);
-        epreuve04.gameObject.SetActive(true);
+        Livre4.gameObject.SetActive(true);
     }
-    public void FermerLivre21()
+    public void OuvirLivre5()
     {
-        swap.gameObject.SetActive(true);
-        livre.gameObject.SetActive(true);
-        epreuve01.gameObject.SetActive(false);
+        livre.gameObject.SetActive(false);
+        Livre5.gameObject.SetActive(true);
     }
-    public void FermerLivre22()
+    public void OuvirLivre6()
     {
-        swap.gameObject.SetActive(true);
-        livre.gameObject.SetActive(true);
-        epreuve02.gameObject.SetActive(false);
+        livre.gameObject.SetActive(false);
+        Livre6.gameObject.SetActive(true);
     }
-    public void FermerLivre23()
+    public void OuvirLivre7()
     {
-        swap.gameObject.SetActive(true);
-        livre.gameObject.SetActive(true);
-        epreuve03.gameObject.SetActive(false);
+        livre.gameObject.SetActive(false);
+        Livre7.gameObject.SetActive(true); ;
     }
-    public void FermerLivre24()
+    public void OuvirLivre8()
     {
-        swap.gameObject.SetActive(true);
+        livre.gameObject.SetActive(false);
+        Livre8.gameObject.SetActive(true);
+    }
+
+    public void FermerLivre1()
+    {
+        epreuve1.gameObject.SetActive(false);
+        Image1.gameObject.SetActive(true);
+    }
+    public void FermerLivre2()
+    {
+        epreuve2.gameObject.SetActive(false);
+        Image2.gameObject.SetActive(true);
+    }
+    public void FermerLivre3()
+    {
+        epreuve3.gameObject.SetActive(false);
+        Image3.gameObject.SetActive(true);
+    }
+    public void FermerLivre4()
+    {
+        epreuve4.gameObject.SetActive(false);
+        Image4.gameObject.SetActive(true);
+    }
+    public void FermerLivre5()
+    {
+        epreuve5.gameObject.SetActive(false);
+        Image5.gameObject.SetActive(true);
+    }
+    public void FermerLivre6()
+    {
+        epreuve6.gameObject.SetActive(false);
+        Image6.gameObject.SetActive(true);
+    }
+    public void FermerLivre7()
+    {
+        epreuve7.gameObject.SetActive(false);
+        Image7.gameObject.SetActive(true);
+    }
+    public void FermerLivre8()
+    {
+        epreuve8.gameObject.SetActive(false);
+        Image8.gameObject.SetActive(true);
+    }
+
+    public void RangerLivre1()
+    {
         livre.gameObject.SetActive(true);
-        epreuve04.gameObject.SetActive(false);
+        Livre1.gameObject.SetActive(false);
+        boutonLivre1.gameObject.SetActive(false);
+        Ranger1.gameObject.SetActive(true);
+    }
+    public void RangerLivre2()
+    {
+        livre.gameObject.SetActive(true);
+        Livre2.gameObject.SetActive(false);
+        boutonLivre2.gameObject.SetActive(false);
+        Ranger2.gameObject.SetActive(true);
+    }
+    public void RangerLivre3()
+    {
+        livre.gameObject.SetActive(true);
+        Livre3.gameObject.SetActive(false);
+        boutonLivre3.gameObject.SetActive(false);
+        Ranger3.gameObject.SetActive(true);
+    }
+    public void RangerLivre4()
+    {
+        livre.gameObject.SetActive(true);
+        Livre4.gameObject.SetActive(false);
+        boutonLivre4.gameObject.SetActive(false);
+        Ranger4.gameObject.SetActive(true);
+    }
+    public void RangerLivre5()
+    {
+        livre.gameObject.SetActive(true);
+        Livre5.gameObject.SetActive(false);
+        boutonLivre5.gameObject.SetActive(false);
+        Ranger5.gameObject.SetActive(true);
+    }
+    public void RangerLivre6()
+    {
+        livre.gameObject.SetActive(true);
+        Livre6.gameObject.SetActive(false);
+        boutonLivre6.gameObject.SetActive(false);
+        Ranger6.gameObject.SetActive(true);
+    }
+    public void RangerLivre7()
+    {
+        livre.gameObject.SetActive(true);
+        Livre7.gameObject.SetActive(false);
+        boutonLivre7.gameObject.SetActive(false);
+        Ranger7.gameObject.SetActive(true);
+    }
+    public void RangerLivre8()
+    {
+        livre.gameObject.SetActive(true);
+        Livre8.gameObject.SetActive(false);
+        boutonLivre8.gameObject.SetActive(false);
+        Ranger8.gameObject.SetActive(true);
     }
 }
